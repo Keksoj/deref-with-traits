@@ -20,9 +20,6 @@ impl Running for Runner {
     fn run(&self) {
         println!("I run 100 meters in {} seconds!", self.sprint_time);
     }
-    fn walk(&self){
-        self.deref().walk()
-    }
 }
 
 impl Deref for Runner {

@@ -1,5 +1,4 @@
 use crate::{Running, Walking};
-use std::ops::Deref;
 
 pub struct Contest {
     pub name: String,
@@ -14,10 +13,10 @@ impl Contest {
         walker.walk();
     }
 
-    pub fn start_a_race(
+    pub fn start_a_race<T: Running>(
         &self,
         // I want to call one Trait but use methods from both
-        runner: &dyn Running,
+        runner: &T,
     ) {
         self.welcome_a_walker(runner);
         println!("Welcome! And how fast do you run?");
