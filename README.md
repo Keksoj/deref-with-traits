@@ -57,7 +57,7 @@ My tutor told me to look at the
 Using that trait, I should be able to do:
 
 ```rust
-//struct.rs
+//structs.rs
 pub struct Walker { pub name: String }
 
 impl Walking for Walker {
